@@ -5,6 +5,7 @@ import {
   ArrowRight,
   Bot,
   CheckCircle2,
+  ChevronRight,
   FileSearch,
   Lightbulb,
   Loader2,
@@ -77,13 +78,15 @@ export default function Home() {
   return (
     <main className="shell">
       <nav className="nav">
-        <div className="brand">
-          <span className="brandMark">
-            <Sparkles size={18} />
-          </span>
-          Rufus Readiness Twin
+        <div className="brandLockup">
+          <div className="pulseLogo">Pulse</div>
+          <div className="byPixii">by Pixii</div>
         </div>
-        <span className="navPill">For Amazon sellers</span>
+        <div className="navLinks">
+          <a href="#audit">Audit</a>
+          <a href="#proof">Proof</a>
+          <span className="navPill">Rufus readiness</span>
+        </div>
       </nav>
 
       <section className="hero">
@@ -91,11 +94,10 @@ export default function Home() {
           <div className="eyebrow">
             <Bot size={16} /> AI shopper simulation
           </div>
-          <h1>Will Rufus recommend your product?</h1>
+          <h1>Will AI shoppers recommend your listing?</h1>
           <p className="lead">
-            Paste your listing, compare it with competitors, and get a shopper-facing diagnosis:
-            ranking risk, missing trust signals, and a Pixii-style creative brief for images,
-            bullets, and A+ content.
+            Drop your Amazon URL, compare it with competitors, and get the strategy that helps
+            your product win Rufus, COSMO, and the real shopper behind the search.
           </p>
           <div className="proofRow">
             <span className="proof">
@@ -110,7 +112,7 @@ export default function Home() {
           </div>
         </div>
 
-        <form className="formPanel" onSubmit={runAudit}>
+        <form className="formPanel" id="audit" onSubmit={runAudit}>
           <p className="formTitle">
             <Target size={20} /> Run a readiness audit
           </p>
@@ -158,7 +160,13 @@ export default function Home() {
         </form>
       </section>
 
-      <section className="sampleStrip">
+      <section className="trustBand">
+        <span>Built for Amazon sellers</span>
+        <span>Optimized for Rufus-style answers</span>
+        <span>Creative strategy, not just scores</span>
+      </section>
+
+      <section className="sampleStrip" id="proof">
         <div className="miniCard">
           <Target size={22} />
           <strong>Rank like a shopper</strong>
@@ -173,6 +181,27 @@ export default function Home() {
           <Wand2 size={22} />
           <strong>Turn diagnosis into creative</strong>
           <p>Every weakness becomes a concrete image, copy, or A+ content task a Pixii user would care about.</p>
+        </div>
+      </section>
+
+      <section className="featureBand">
+        <div>
+          <span className="kicker">Zero prompt chaos</span>
+          <h2>From listing diagnosis to creative direction.</h2>
+        </div>
+        <div className="featureList">
+          <div>
+            <ChevronRight size={18} />
+            <span>Main image ideas built from shopper objections</span>
+          </div>
+          <div>
+            <ChevronRight size={18} />
+            <span>Infographic and A+ content angles for conversion gaps</span>
+          </div>
+          <div>
+            <ChevronRight size={18} />
+            <span>Two-model audit path with a local fallback for demo safety</span>
+          </div>
         </div>
       </section>
 
